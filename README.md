@@ -1,2 +1,2 @@
-# portfolio
-My personal portfolio highlighting ML, CV, and engineering projects.
+# Portfolio
+My personal portfolio highlights ML, CV, and engineering projects.
