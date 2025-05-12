@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Tayyab - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Custom styles for the message box */
+        #message-box {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0fdf4;
+            color: #15803d;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #16a34a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        #message-box.show {
+            display: block;
+        }
+
+        body {
+            background-color: #000; /* Set default background to black */
+        }
+        .bg-gray-100 {
+            background-color: #111827; /* Re-define gray-100 to a darker shade */
+        }
+        .bg-white{
+             background-color: #1F2937;
+        }
+
+        .text-gray-100{
+            color: #f8fafc;
+        }
+        .text-gray-600 {
+            color: #d1d5db; /* Lighter text for better contrast on dark background */
+        }
+
+        .text-gray-700 {
+            color: #e5e7eb;
+        }
+        .text-gray-800{
+            color:#f9fafb;
+        }
+
+        .border-gray-200 {
+            border-color: #374151;
+        }
+
+        .hover\:bg-gray-700:hover {
+            background-color: #4b5563;
+        }
+
+        .text-blue-600 {
+            color: #60a5fa; /* Lighter blue for better visibility */
+        }
+
+        .hover\:text-blue-600:hover{
+             color: #67e8f9;
+        }
+
+        .border-blue-500 {
+            border-color: #60a5fa; /* Lighter blue for better visibility */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 font-inter text-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-700">Muhammad Tayyab</h1>
+            <p class="text-lg text-gray-600 mt-2">Electrical Engineer | ML Researcher | Python Programmer</p>
+            <nav class="mt-6">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="#about" class="text-gray-300 hover:text-blue-600 transition duration-300">About</a></li>
+                    <li><a href="#projects" class="text-gray-300 hover:text-blue-600 transition duration-300">Projects</a></li>
+                    <li><a href="#experience" class="text-gray-300 hover:text-blue-600 transition duration-300">Experience</a></li>
+                    <li><a href="#skills" class="text-gray-300 hover:text-blue-600 transition duration-300">Skills</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-blue-600 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about" class="bg-gray-800 rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-gray-100 mb-6 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="https://via.placeholder.com/150" alt="Muhammad Tayyab" class="rounded-full shadow-lg">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-gray-300 text-lg">
+                        As a 4th year Electrical Engineering student at NUST, I am passionate about leveraging my skills in AI, Machine Learning, and Python to develop innovative solutions. My experience includes leading software development, conducting research, and contributing to impactful projects. I am driven by challenges and eager to make a positive impact in my community.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="bg-gray-900 rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-gray-100 mb-6 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Off-Road Driving System</h3>
+                    <p class="text-gray-300 mb-4">Developed a GPS-navigated system for unstructured environments, optimizing real-time decision-making for mobility and obstacle avoidance.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Defect Detection System</h3>
+                    <p class="text-gray-300 mb-4">Designed an efficient system using ICP alignment and threshold-based identification to analyze structural deviations.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Bluetooth-Controlled Car</h3>
+                    <p class="text-gray-300 mb-4">Developed a Bluetooth-controlled car using Arduino, enabling real-time wireless maneuvering via a mobile app.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Object Counter</h3>
+                    <p class="text-gray-300 mb-4">Designed and simulated an object counter using a phototransistor-based sensor for industrial applications.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">220V Synchronous Generator</h3>
+                    <p class="text-gray-300 mb-4">Designed and built a 220V three-phase synchronous generator, using DC excitation to generate AC voltage.</p>
+                </div>
+                 <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Face Detection</h3>
+                    <p class="text-gray-300 mb-4">Implemented mask and non-mask face detection using the YOLO algorithm.</p>
+                </div>
+                 <div class="bg-gray-800 rounded-lg shadow-sm p-6 border border-gray-700">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Marker and MCQ Detection</h3>
+                    <p class="text-gray-300 mb-4">Experienced in Computer Vision based marker detection and checking MCQs using Optical marked Recognition and Optical Character Recognition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="bg-gray-800 rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-gray-100 mb-6 text-center">Work Experience</h2>
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-500 pl-6 py-2 border-gray-700">
+                    <h3 class="text-xl font-semibold text-gray-100">Software Lead and Mentor</h3>
+                    <p class="text-gray-600 mb-2">Dec 2022 - March 2024, Karachi</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Developed software skills for Unmanned Aerial Vehicle autonomous path planning.</li>
+                        <li>Led and managed a team of junior software engineers.</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-6 py-2 border-gray-700">
+                    <h3 class="text-xl font-semibold text-gray-100">Researcher, ML Programmer</h3>
+                    <p class="text-gray-600 mb-2">Mar 2023 - May 2023, Karachi</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Gained expertise in LSTM networks for time-series prediction.</li>
+                        <li>Worked on a motor dataset, enhancing data analysis skills.</li>
+                        <li>Applied machine learning algorithms to predict future values.</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-6 py-2 border-gray-700">
+                    <h3 class="text-xl font-semibold text-gray-100">Research Assistant</h3>
+                    <p class="text-gray-600 mb-2">Dec 2023 - Feb 2024, Islamabad</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Learned professional report writing and fact-checking.</li>
+                        <li>Improved knowledge and report writing skills.</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-6 py-2 border-gray-700">
+                    <h3 class="text-xl font-semibold text-gray-100">ML Researcher, Python Programmer</h3>
+                    <p class="text-gray-600 mb-2">June 2024 - Present, Australia</p>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Boosted software base skills in industrial research and development.</li>
+                        <li>Improved research skills and scientific writing.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-gray-900 rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-gray-100 mb-6 text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg shadow-sm p-4 border border-gray-700">
+                    <h4 class="text-lg font-semibold text-blue-600 mb-2 text-gray-100">Technical Skills</h4>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Artificial Intelligence and Machine Learning</li>
+                        <li>Computer Vision and Python (TensorFlow)</li>
+                        <li>MATLAB</li>
+                        <li>LINUX</li>
+                        <li>PROTEUS/MULTISIM</li>
+                        <li>AUTOCAD</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-sm p-4 border border-gray-700">
+                    <h4 class="text-lg font-semibold text-blue-600 mb-2 text-gray-100">Coding Skills</h4>
+                     <ul class="list-disc list-inside text-gray-300">
+                        <li>Coding</li>
+                        <li>Python Data Structures</li>
+                        <li>Neural Network and Deep Learning</li>
+                     </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-sm p-4 border border-gray-700">
+                    <h4 class="text-lg font-semibold text-blue-600 mb-2 text-gray-100">Soft Skills</h4>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Communication</li>
+                        <li>Problem Solving</li>
+                        <li>Team Member</li>
+                        <li>Customer Service</li>
+                        <li>Microsoft Office</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="mt-6">
+                <h4 class="text-lg font-semibold text-blue-600 mb-2 text-gray-100">Courses and Certifications</h4>
+                 <ul class="list-disc list-inside text-gray-300">
+                        <li>DevTown HTML CSS</li>
+                        <li>Microsoft HTML CSS</li>
+                        <li>Getting Started With Python</li>
+                        <li>Lab View Essential-1</li>
+                        <li>Amazon Aws HTML and CSS</li>
+                        <li>Developer Club HTML CSS</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-800 rounded-lg shadow-md p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-gray-100 mb-6 text-center">Contact Me</h2>
+            <div class="text-center">
+                <p class="text-lg text-gray-300 mb-4">Email: tayyabsaleem851@gmail.com</p>
+                <p class="text-lg text-gray-300 mb-4">Phone: +92 334 3206982</p>
+                <p class="text-lg text-gray-300 mb-4">LinkedIn: <a href="https://www.linkedin.com/in/m-tayyab-73866a228/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://www.linkedin.com/in/m-tayyab-73866a228/</a></p>
+            </div>
+        </section>
+    </div>
+
+    <div id="message-box" class="hidden"></div>
+
+    <script>
+        // Function to display a message
+        function showMessage(message, type = 'success') {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = message;
+            messageBox.className = `fixed top-4 left-1/2 transform -translate-x-1/2 bg-${type === 'success' ? 'green' : 'red'}-100 text-${type === 'success' ? 'green' : 'red'}-700 border border-${type === 'success' ? 'green' : 'red'}-400 px-4 py-2 rounded shadow-md`;
+            messageBox.classList.add('show');
+            setTimeout(() => {
+                messageBox.classList.remove('show');
+            }, 3000); // Hide after 3 seconds
+        }
+
+        // --- Interactive Features ---
+
+        // 1. Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 2. Highlight Active Section in Navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('header nav ul li a');
+
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    navLinks[index].classList.add('active');
+                } else {
+                    navLinks[index].classList.remove('active');
+                }
+            });
+        });
+
+       // 3. Responsive Navigation (Optional - for smaller screens)
+        const navToggle = document.createElement('button');
+        navToggle.innerHTML = '☰'; // Hamburger icon
+        navToggle.classList.add('md:hidden', 'absolute', 'top-4', 'right-4', 'text-gray-300', 'hover:text-blue-600', 'text-2xl', 'cursor-pointer');
+        document.querySelector('header nav').parentElement.appendChild(navToggle);
+
+        const navList = document.querySelector('header nav ul');
+        navList.classList.add('hidden', 'md:flex', 'flex-col', 'md:flex-row', 'absolute', 'top-16', 'right-0', 'bg-gray-800', 'shadow-md', 'rounded-md', 'p-4', 'space-y-2', 'md:space-y-0', 'md:space-x-6');
+        navToggle.addEventListener('click', () => {
+            navList.classList.toggle('hidden');
+        });
+
+        // Ensure the navigation list is correctly positioned for small screens
+        navList.classList.add('right-4');
+        navList.classList.remove('left-0');
+
+    </script>
+</body>
+</html>
